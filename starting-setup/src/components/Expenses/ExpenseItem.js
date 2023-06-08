@@ -5,7 +5,7 @@ import Card from '../UI/Card';
 
 const ExpenseItem = (props) => {
 
-  const [title, setTitle] = useState(props.title); //resgistering the property.
+  const [title, setTitle] = useState(props.title); //registering the property.
 
   const clickHandler = (title) => {
     setTitle('updated!!!!');
