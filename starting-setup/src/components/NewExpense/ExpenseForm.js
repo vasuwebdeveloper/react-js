@@ -1,7 +1,7 @@
 import "./ExpenseForm.css";
 import { useState } from "react";
 
-const ExpenseForm = ({onSaveExpenseData}) => {
+const ExpenseForm = ({ onSaveExpenseData }) => {
   const [title, changeTitle] = useState("");
   const [amount, changeAmount] = useState("");
   const [date, changeDate] = useState("");
@@ -33,7 +33,7 @@ const ExpenseForm = ({onSaveExpenseData}) => {
 
   const amountChangeHandler = (event) => {
     changeAmount(event.target.value);
-};
+  };
 
   const dateChangeHandler = (event) => {
     changeDate(event.target.value);
@@ -44,25 +44,22 @@ const ExpenseForm = ({onSaveExpenseData}) => {
     const expenseData = {
       title,
       amount,
-      date: new Date(date)
-    }
+      date: new Date(date),
+    };
     onSaveExpenseData(expenseData);
 
-
-
     //after submit erase the values
-    changeTitle('');
-    changeAmount('');
-    changeDate('');
-  }
-
+    changeTitle("");
+    changeAmount("");
+    changeDate("");
+  };
 
   return (
-    <form onSubmit = {submitHandler}>
+    <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
-          <input type="text" onChange={inputTitleChangeHandler} value = {title}/>
+          <input type="text" onChange={inputTitleChangeHandler} value={title} />
         </div>
         <div className="new-expense__control">
           <label>Amount</label>
@@ -71,7 +68,7 @@ const ExpenseForm = ({onSaveExpenseData}) => {
             min="0.01"
             step="0.01"
             onChange={amountChangeHandler}
-            value ={amount}
+            value={amount}
           />
         </div>
         <div className="new-expense__control">
@@ -81,7 +78,7 @@ const ExpenseForm = ({onSaveExpenseData}) => {
             min="2019-01-01"
             max="2022-12-31"
             onChange={dateChangeHandler}
-            value = {date}
+            value={date}
           />
         </div>
       </div>
