@@ -24,7 +24,7 @@ whenever the state changes useState() will re-execute the entire component.
 
 #### stateful vs stateless components
 Q) Why do you need this extra "state" concept instead of regular JS variables which you change and use?
-ANS: Because standard JS variables don't cause React components to be re-evaluated.
+   ANS: Because standard JS variables don't cause React components to be re-evaluated.
 
 
 Q) What's wrong about this code snippet?
