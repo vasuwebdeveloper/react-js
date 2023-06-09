@@ -13,3 +13,23 @@ useState always returns an array with two elements. The first element is the cur
 Ex: const [title, setTitle] = useState(props.title);
 
 whenever the state changes useState() will re-execute the entire component. 
+
+#### safest way to always operate on the latest state. If you are dependent on the previous state then use below.
+    setUserInput((prevState) => {
+      return {
+        ...prevState,
+        title: event.target.value,
+      };
+    });
+
+#### stateful vs stateless components
+Q) Why do you need this extra "state" concept instead of regular JS variables which you change and use?
+ANS: Because standard JS variables don't cause React components to be re-evaluated.
+
+
+Q) What's wrong about this code snippet?
+const [counter, setCounter] = useState(1);
+...
+setCounter(counter + 1);
+
+ANS: If you update the state that depends on the previous state, you should use the 'function form' of state updating function instead.
