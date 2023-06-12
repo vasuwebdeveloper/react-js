@@ -33,3 +33,5 @@ const [counter, setCounter] = useState(1);
 setCounter(counter + 1);
 
 ANS: If you update the state that depends on the previous state, you should use the 'function form' of state updating function instead.
+
+#### parent to child component && child to parent component
