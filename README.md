@@ -34,4 +34,7 @@ setCounter(counter + 1);
 
 ANS: If you update the state that depends on the previous state, you should use the 'function form' of state updating function instead.
 
+#### styled-components
+
+
 
