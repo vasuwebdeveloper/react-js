@@ -1,3 +1,4 @@
+import styles from './Button.module.css'
 // import styled from 'styled-components';
 
 // const Button = styled.button`
@@ -28,7 +29,7 @@
 
 const Button = props => {
   return (
-    <button type={props.type} className="button" onClick={props.onClick}>
+    <button type={props.type} className={styles.button} onClick={props.onClick}>
       {props.children}
     </button>
   );
