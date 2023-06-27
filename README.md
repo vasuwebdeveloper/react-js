@@ -37,4 +37,8 @@ ANS: If you update the state that depends on the previous state, you should use 
 #### styled-components
 https://styled-components.com/
 
+#### css-modules 
+https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/
+
+#### react dev tools chrome extension
 
