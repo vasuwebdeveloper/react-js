@@ -1,4 +1,4 @@
-const ExpenseTable = () => {
+const ExpenseTable = ({items}) => {
     return (
         <table className="result">
         <thead>

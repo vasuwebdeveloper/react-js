@@ -1,11 +1,10 @@
 import { useState } from "react";
 
-const FormInput = () => {
+const FormInput = ({onAddInvestment}) => {
     const [savings,setSavings] = useState('');
     const [yearlySavings,setYearlySavings] = useState('');
     const [interest,setInterest] = useState('');
     const [duration,setDuration] = useState('');
-    const [yearlyData, setYearlyData] = useState('');
 
 
     const changeSavingsHandler = (event) => {
@@ -52,13 +51,10 @@ const FormInput = () => {
             yearlyContribution: yearlyContribution,
           });
         }
-        setYearlyData((prevYearlyData) => {
-          return [yearlyData, ...prevYearlyData];
-        });
+         
+        onAddInvestment(yearlyData);
         // do something with yearlyData ...
       };
-      debugger;
-    
 return (
     <div>
          <form className="form" onSubmit={calculateHandler}>
