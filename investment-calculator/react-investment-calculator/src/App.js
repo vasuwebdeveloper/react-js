@@ -1,12 +1,13 @@
 import Header from "./components/Header/Header";
 import FormInput from "./components/Form/FormInput";
-import ExpenseTable from "./components/ExpenseTable/ExpenseTable";
+import ExpenseTableItem from "./components/ExpenseTableItem/ExpenseTableItem";
 import { useState } from "react";
 
 function App() {
 
   const [investments, setInvestments] = useState('');
   const addInvestmentHandler = (investments) =>{
+    debugger
     setInvestments((prevInvestments) => {
         return [investments, ...prevInvestments];
       });
@@ -18,10 +19,10 @@ function App() {
 
   if(investments.length > 0){
     content = (
-      <ExpenseTable items = {investments}/>
+      <ExpenseTableItem items = {investments}/>
     );
   }
-  }
+  
 
   return (
     <div>
@@ -36,5 +37,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
