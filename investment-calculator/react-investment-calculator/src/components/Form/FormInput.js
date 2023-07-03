@@ -44,7 +44,6 @@ const FormInput = ({onAddInvestment}) => {
           const yearlyInterest = currentSavings * expectedReturn;
           currentSavings += yearlyInterest + yearlyContribution;
           yearlyData.push({
-            // feel free to change the shape of the data pushed to the array!
             year: i + 1,
             yearlyInterest: yearlyInterest,
             savingsEndOfYear: currentSavings,
