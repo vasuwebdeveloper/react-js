@@ -10,7 +10,7 @@ const ExpenseTable = ({items}) => {
             <th>Invested Capital</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody> 
           <tr>
             <td>YEAR NUMBER</td>
             <td>TOTAL SAVINGS END OF YEAR</td>
