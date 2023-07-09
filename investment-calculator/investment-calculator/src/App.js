@@ -37,7 +37,7 @@ function App() {
     <div>
       <Header/>
       <UserInput onClickHandler = {calculateHandler}/>
-      {!userInput && <p>No investments calculated yet....</p>}
+      {!userInput && <p style = {{textAlign: 'center'}}>No investments calculated yet....</p>}
       {userInput && <ResultsTable data = {yearlyData} initialInvestment = {userInput['current-savings']}/>}
       {/* Todo: Show below table conditionally (only once result data is available) */}
       {/* Show fallback text if no data is available */}
